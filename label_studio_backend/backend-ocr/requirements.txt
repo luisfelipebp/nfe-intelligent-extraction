@@ -1,0 +1,7 @@
+label-studio-ml
+easyocr
+torch
+opencv-python-headless
+numpy
+redis
+rq

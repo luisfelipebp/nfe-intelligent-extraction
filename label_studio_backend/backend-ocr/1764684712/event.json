@@ -1,0 +1,185 @@
+{
+  "event": "TASKS_CREATED",
+  "job_id": "1764684712",
+  "data": {
+    "tasks": [
+      {
+        "id": 543,
+        "data": {
+          "image": "/data/upload/16/143d8dee-aug_nfe_v4_85.jpg"
+        },
+        "meta": {},
+        "created_at": "2025-12-02T14:11:51.149099Z",
+        "updated_at": "2025-12-02T14:11:51.149099Z",
+        "is_labeled": false,
+        "overlap": 1,
+        "inner_id": 465,
+        "total_annotations": 0,
+        "cancelled_annotations": 0,
+        "total_predictions": 0,
+        "comment_count": 0,
+        "unresolved_comment_count": 0,
+        "last_comment_updated_at": null,
+        "project": 16,
+        "updated_by": null,
+        "file_upload": 1581,
+        "comment_authors": []
+      }
+    ],
+    "project": {
+      "id": 16,
+      "task_number": 428,
+      "finished_task_number": 427,
+      "total_predictions_number": 427,
+      "total_annotations_number": 427,
+      "num_tasks_with_annotations": 427,
+      "useful_annotation_number": 427,
+      "ground_truth_number": 0,
+      "skipped_annotations_number": 0,
+      "title": "project_ocr",
+      "description": "",
+      "label_config": "<View>\n  <Image name=\"image\" value=\"$image\"/>\n  \n  <RectangleLabels name=\"label\" toName=\"image\">\n    <Label value=\"CHAVE_ACESSO\" background=\"#ff00ea\"/> <Label value=\"NOME_EMITENTE\" background=\"#FFA500\"/> <Label value=\"CNPJ_EMITENTE\" background=\"#FF0000\"/> <Label value=\"NOME_DESTINATARIO\" background=\"#FFD700\"/> <Label value=\"CNPJ_DESTINATARIO\" background=\"#8B0000\"/> <Label value=\"DATA_EMISSAO\" background=\"#0000FF\"/> <Label value=\"VALOR_TOTAL\" background=\"#008000\"/> <Label value=\"NUM_NOTA_FISCAL\" background=\"#800080\"/> <Label value=\"NUM_SERIE\" background=\"#FF00FF\"/> <Label value=\"Text\" background=\"#808080\"/> </RectangleLabels>\n\n  <TextArea name=\"transcription\" toName=\"image\" editable=\"true\" perRegion=\"true\" required=\"false\" displayMode=\"region-list\"/>\n</View>",
+      "parsed_label_config": {
+        "label": {
+          "type": "RectangleLabels",
+          "to_name": [
+            "image"
+          ],
+          "inputs": [
+            {
+              "type": "Image",
+              "valueType": null,
+              "value": "image"
+            }
+          ],
+          "labels": [
+            "CHAVE_ACESSO",
+            "NOME_EMITENTE",
+            "CNPJ_EMITENTE",
+            "NOME_DESTINATARIO",
+            "CNPJ_DESTINATARIO",
+            "DATA_EMISSAO",
+            "VALOR_TOTAL",
+            "NUM_NOTA_FISCAL",
+            "NUM_SERIE",
+            "Text"
+          ],
+          "labels_attrs": {
+            "CHAVE_ACESSO": {
+              "value": "CHAVE_ACESSO",
+              "background": "#ff00ea"
+            },
+            "NOME_EMITENTE": {
+              "value": "NOME_EMITENTE",
+              "background": "#FFA500"
+            },
+            "CNPJ_EMITENTE": {
+              "value": "CNPJ_EMITENTE",
+              "background": "#FF0000"
+            },
+            "NOME_DESTINATARIO": {
+              "value": "NOME_DESTINATARIO",
+              "background": "#FFD700"
+            },
+            "CNPJ_DESTINATARIO": {
+              "value": "CNPJ_DESTINATARIO",
+              "background": "#8B0000"
+            },
+            "DATA_EMISSAO": {
+              "value": "DATA_EMISSAO",
+              "background": "#0000FF"
+            },
+            "VALOR_TOTAL": {
+              "value": "VALOR_TOTAL",
+              "background": "#008000"
+            },
+            "NUM_NOTA_FISCAL": {
+              "value": "NUM_NOTA_FISCAL",
+              "background": "#800080"
+            },
+            "NUM_SERIE": {
+              "value": "NUM_SERIE",
+              "background": "#FF00FF"
+            },
+            "Text": {
+              "value": "Text",
+              "background": "#808080"
+            }
+          }
+        },
+        "transcription": {
+          "type": "TextArea",
+          "to_name": [
+            "image"
+          ],
+          "inputs": [
+            {
+              "type": "Image",
+              "valueType": null,
+              "value": "image"
+            }
+          ],
+          "labels": [],
+          "labels_attrs": {}
+        }
+      },
+      "label_config_hash": 3740303723473819763,
+      "expert_instruction": "",
+      "show_instruction": false,
+      "show_skip_button": true,
+      "enable_empty_annotation": true,
+      "reveal_preannotations_interactively": false,
+      "show_annotation_history": false,
+      "show_collab_predictions": true,
+      "evaluate_predictions_automatically": false,
+      "token": "gvhoR7PXEz5pqeLu3wdybTv43noMtWMQculdkuM1",
+      "result_count": 0,
+      "color": "#FFFFFF",
+      "maximum_annotations": 1,
+      "min_annotations_to_start_training": 1,
+      "control_weights": {
+        "label": {
+          "overall": 1.0,
+          "type": "RectangleLabels",
+          "labels": {
+            "CHAVE_ACESSO": 1.0,
+            "NOME_EMITENTE": 1.0,
+            "CNPJ_EMITENTE": 1.0,
+            "NOME_DESTINATARIO": 1.0,
+            "CNPJ_DESTINATARIO": 1.0,
+            "DATA_EMISSAO": 1.0,
+            "VALOR_TOTAL": 1.0,
+            "NUM_NOTA_FISCAL": 1.0,
+            "NUM_SERIE": 1.0,
+            "Text": 1.0
+          }
+        },
+        "transcription": {
+          "overall": 1.0,
+          "type": "TextArea",
+          "labels": {}
+        }
+      },
+      "model_version": "easyocr",
+      "data_types": {
+        "image": "Image"
+      },
+      "is_draft": false,
+      "is_published": false,
+      "created_at": "2025-11-18T11:57:13.266714Z",
+      "updated_at": "2025-11-26T13:22:32.556242Z",
+      "sampling": "Sequential sampling",
+      "skip_queue": "REQUEUE_FOR_OTHERS",
+      "show_ground_truth_first": false,
+      "show_overlap_first": false,
+      "overlap_cohort_percentage": 100,
+      "task_data_login": null,
+      "task_data_password": null,
+      "pinned_at": null,
+      "custom_task_lock_ttl": null,
+      "search_vector": null,
+      "organization": 1,
+      "created_by": 4
+    }
+  }
+}

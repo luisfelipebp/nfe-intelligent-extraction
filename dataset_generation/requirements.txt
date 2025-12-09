@@ -1,0 +1,5 @@
+PyMuPDF
+brazilfiscalreport
+Faker
+opencv-python-headless
+albumentations

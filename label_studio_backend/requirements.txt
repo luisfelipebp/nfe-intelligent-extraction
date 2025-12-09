@@ -1,0 +1,9 @@
+psycopg2-binary>=2.9.9
+label-studio-ml
+easyocr
+torch
+opencv-python-headless
+numpy
+redis
+rq
+label-studio

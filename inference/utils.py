@@ -2,6 +2,16 @@ import re
 import uuid
 from datetime import datetime
 
+def fix_encoding(text):
+    if not isinstance(text, str):
+        return text
+    
+    try:
+        decoded = text.encode('latin-1').decode('utf-8')
+        return decoded
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return text
+
 def convert_date_iso(date_str):
     try:
         return datetime.strptime(date_str, "%d/%m/%Y").strftime("%Y-%m-%d")

@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from faker import Faker
 
 OUTPUT_DIR = "./generated_xmls/"
-FILE_COUNT = 30
+FILE_COUNT = 5
 fake = Faker('pt_BR')
 
 if not os.path.exists(OUTPUT_DIR):

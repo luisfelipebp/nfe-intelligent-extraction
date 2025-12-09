@@ -195,14 +195,18 @@ class NFeProcessor:
                 
                 text = " ".join([p[0] for p in parts]).strip()
                 
+                text = utils.fix_encoding(text) 
+                
                 if label == "CHAVE_ACESSO":
                     clean = re.sub(r'\D', '', text)
                     if len(clean) > 44: clean = clean[:44]
                     text = ' '.join([clean[i:i+4] for i in range(0, len(clean), 4)])
                 
                 final_text = utils.clean_field(label, text)
+                
                 if len(final_text) > 1:
                     processed_data[label] = final_text
+
 
             value_in_output = processed_data.get("VALOR_TOTAL", "")
             if not value_in_output:

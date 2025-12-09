@@ -10,8 +10,6 @@ __pycache__/
 *.pyc
 
 nfes/
-pdfs_gerados/
-dataset_generation/output/
 inference/temp_batch_process/
 inference/documentos_entrada/
 inference/Documentos_entrada/

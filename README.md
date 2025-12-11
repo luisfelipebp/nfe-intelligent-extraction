@@ -96,14 +96,14 @@ Ideal se você tem uma placa NVIDIA. O processamento é cerca de 10x mais rápid
 > **Requisito CUDA:** Para usar a flag `--gpus all`, certifique-se de ter o **NVIDIA Container Toolkit** instalado.
 
 ```bash
-docker run --gpus all -p 8501:8501 luisfelipebp/nfe-extractor:v1.1
+docker run --gpus all -p 8501:8501 luisfelipebp/nfe-extractor:v1.2
 ```
 
 **Opção 2: Apenas CPU (Modo Compatibilidade)**
 Funciona em qualquer computador.
 
 ```bash
-docker run -p 8501:8501 luisfelipebp/nfe-extractor:v1.1
+docker run -p 8501:8501 luisfelipebp/nfe-extractor:v1.2
 ```
 
 ### Utilizando a Aplicação

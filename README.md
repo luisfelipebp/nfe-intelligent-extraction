@@ -119,7 +119,7 @@ Caso queira rodar o código fonte localmente ou explorar os notebooks de treino:
 
 ### 1. Clone o repositório
 ```bash
-git clone [https://github.com/luisfelipebp/nfe-intelligent-extraction.git](https://github.com/luisfelipebp/nfe-intelligent-extraction.git)
+git clone https://github.com/luisfelipebp/nfe-intelligent-extraction.git
 cd nfe-intelligent-extraction
 ```
 

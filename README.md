@@ -75,6 +75,7 @@ nfe-intelligent-extraction/
 │                             # Notebooks e scripts utilizados para o fine-tuning do LayoutLMv3.
 │
 └── README.md                 # Documentação do projeto
+```
 
 ##  Instalação e Execução
 

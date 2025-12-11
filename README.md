@@ -93,7 +93,7 @@ O sistema é distribuído em container para garantir que rode igual em qualquer 
 **Opção 1: Com GPU (Alta Performance)**
 Ideal se você tem uma placa NVIDIA. O processamento é cerca de 10x mais rápido.
 
-> ** Requisito CUDA:** Para usar a flag `--gpus all`, certifique-se de ter o **NVIDIA Container Toolkit** instalado.
+> **Requisito CUDA:** Para usar a flag `--gpus all`, certifique-se de ter o **NVIDIA Container Toolkit** instalado.
 
 ```bash
 docker run --gpus all -p 8501:8501 luisfelipebp/nfe-extractor:v1.1

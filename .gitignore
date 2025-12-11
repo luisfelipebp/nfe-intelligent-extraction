@@ -11,8 +11,6 @@ __pycache__/
 
 nfes/
 inference/temp_batch_process/
-inference/documentos_entrada/
-inference/Documentos_entrada/
 *.arrow
 
 .vscode/

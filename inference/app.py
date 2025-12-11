@@ -159,7 +159,7 @@ if uploaded_files:
 
     c1, c2, c3 = st.columns([3, 2, 3])
     with c2:
-        process_btn = st.button("INICIAR EXTRAÇÃO", type="primary")
+        process_btn = st.button("START EXTRACTION", type="primary")
 
     if process_btn:
         temp_dir = "temp_batch_process"

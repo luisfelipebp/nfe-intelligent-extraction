@@ -1,5 +1,6 @@
 # NFe Intelligent Extraction: End-to-End IDP com LayoutLMv3
 
+
 Este projeto é uma solução completa de **Intelligent Document Processing (IDP)** criada para automatizar a extração de dados estruturados de **Notas Fiscais Eletrônicas (DANFEs)**.
 
 O sistema utiliza uma abordagem de **Deep Learning Multimodal**, capaz de identificar campos importantes como CNPJ, valores, datas e chave de acesso analisando ao mesmo tempo o texto e a estrutura visual do documento.
@@ -75,8 +76,11 @@ nfe-intelligent-extraction/
 │                             # Notebooks e scripts utilizados para o fine-tuning do LayoutLMv3.
 │
 └── README.md                 # Documentação do projeto
+```
 
-##  Instalação e Execução
+---
+
+## Instalação e Execução
 
 O sistema é distribuído em container para garantir que rode igual em qualquer máquina.
 
@@ -89,60 +93,58 @@ O sistema é distribuído em container para garantir que rode igual em qualquer 
 **Opção 1: Com GPU (Alta Performance)**
 Ideal se você tem uma placa NVIDIA. O processamento é cerca de 10x mais rápido.
 
-> **⚠️ Requisito CUDA:** Para usar a flag `--gpus all`, certifique-se de ter o **NVIDIA Container Toolkit** instalado.
+> ** Requisito CUDA:** Para usar a flag `--gpus all`, certifique-se de ter o **NVIDIA Container Toolkit** instalado.
 
 ```bash
 docker run --gpus all -p 8501:8501 luisfelipebp/nfe-extractor:v1.1
 ```
 
-**Opção 2: Apenas CPU (Modo Compatibilidade)** Funciona em qualquer computador.
+**Opção 2: Apenas CPU (Modo Compatibilidade)**
+Funciona em qualquer computador.
 
 ```bash
 docker run -p 8501:8501 luisfelipebp/nfe-extractor:v1.1
 ```
 
-Utilizando a Aplicação
- 1.Após rodar o comando, abra no navegador: http://localhost:8501
+### Utilizando a Aplicação
+1. Após rodar o comando, abra no navegador: `http://localhost:8501`
+2. Envie uma imagem ou PDF de uma **DANFE (Nota Fiscal de Produto)**.
+3. O sistema retornará os dados estruturados em JSON.
 
- 2.Envie uma imagem ou PDF de uma DANFE (Nota Fiscal de Produto).
+---
 
- 3.O sistema retornará os dados estruturados em JSON.
+## Instalação Manual (Desenvolvimento)
 
-Instalação Manual (Desenvolvimento)
 Caso queira rodar o código fonte localmente ou explorar os notebooks de treino:
 
-1. Clone o repositório
-
+### 1. Clone o repositório
 ```bash
 git clone [https://github.com/luisfelipebp/nfe-intelligent-extraction.git](https://github.com/luisfelipebp/nfe-intelligent-extraction.git)
 cd nfe-intelligent-extraction
 ```
 
-2. Instale as Dependências
-
+### 2. Instale as Dependências
 ```bash
 pip install -r inference/requirements.txt
 ```
 
-> Nota sobre o Modelo Treinado
-Como o arquivo do modelo (/layoutlmv3-finetuned-nfe) é muito pesado e ultrapassa o limite de 100MB do GitHub, ele não está incluído neste repositório.
+### Nota sobre o Modelo Treinado
+Como o arquivo do modelo (`/layoutlmv3-finetuned-nfe`) é muito pesado e ultrapassa o limite de 100MB do GitHub, ele **não está incluído** neste repositório.
 
 O que isso significa:
+1. **Para rodar no seu PC:** O código `inference.py` só vai funcionar se você treinar seu próprio modelo (usando os scripts da pasta `/training`) ou se tiver o arquivo do modelo salvo manualmente.
+2. **Objetivo do Repositório:** Este código serve para demonstrar a arquitetura, a organização e a lógica utilizada no projeto.
+3. **Para Testar Agora:** Se quiser ver o projeto funcionando imediatamente sem precisar treinar nada, utilize o **Docker** (comando acima). A imagem Docker já vem com o modelo pronto para uso.
 
-Para rodar no seu PC: O código inference.py só vai funcionar se você treinar seu próprio modelo (usando os scripts da pasta /training) ou se tiver o arquivo do modelo salvo manualmente.
-
-Objetivo do Repositório: Este código serve para demonstrar a arquitetura, a organização e a lógica utilizada no projeto.
-
-Para Testar Agora: Se quiser ver o projeto funcionando imediatamente sem precisar treinar nada, utilize o Docker (comando acima). A imagem Docker já vem com o modelo pronto para uso.
-
-3. Executar a Aplicação (Localmente)
+### 3. Executar a Aplicação (Localmente)
 Caso você tenha treinado o modelo e gerado os arquivos necessários na pasta correta, execute:
-
 
 ```bash
 streamlit run inference/app.py
 ```
 
-Licença
+---
 
-Este projeto é Open Source sob a licença MIT. O código fonte está disponível livremente para fins educacionais, de portfólio e referência técnica.
+## Licença
+Este projeto é Open Source sob a **licença MIT**.
+O código fonte está disponível livremente para fins educacionais, de portfólio e referência técnica.

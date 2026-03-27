@@ -7,7 +7,7 @@ import json
 import uuid
 from PIL import Image
 from transformers import AutoModelForTokenClassification, AutoProcessor
-import utils  
+from inference import utils
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -222,30 +222,3 @@ class NFeProcessor:
                 try: os.remove(processing_path)
                 except: pass
 
-if __name__ == "__main__":
-    if not os.path.exists(INPUT_FOLDER):
-        os.makedirs(INPUT_FOLDER)
-        print(json.dumps({"aviso": f"Folder '{INPUT_FOLDER}' created. Add files there."}))
-    else:
-        try:
-            nfe_engine = NFeProcessor()
-            
-            files = [f for f in os.listdir(INPUT_FOLDER) if f.lower().endswith(ACCEPTED_EXTENSIONS)]
-            results_list = []
-            
-            if not files:
-                print(json.dumps({"aviso": "No files found in input folder."}))
-            else:
-                for filename in files:
-                    file_path = os.path.join(INPUT_FOLDER, filename)
-                    
-                    raw_result = nfe_engine.process_file(file_path)
-                    
-                    formatted_result = utils.format_output(filename, raw_result)
-                    
-                    results_list.append(formatted_result)
-
-                print(json.dumps(results_list, indent=4, ensure_ascii=False))
-                
-        except Exception as e:
-            print(json.dumps({"erro_fatal": str(e)}))
